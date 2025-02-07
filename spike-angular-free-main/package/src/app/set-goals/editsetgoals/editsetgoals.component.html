@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Edit</h2>
+<br>
+
+<mat-dialog-content [formGroup]="editgoalsForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+<br>
+  <mat-form-field appearance="outline">
+    <mat-label>Opening Balance</mat-label>
+    <input matInput formControlName="opening" type="number">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Target</mat-label>
+    <input matInput formControlName="target">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Target Date</mat-label>
+    <input matInput formControlName="date">
+  </mat-form-field>
+
+  
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>
+

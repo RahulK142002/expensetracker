@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Pay Bill</h1>
+<h2 mat-dialog-title>Account</h2>
+<mat-dialog-content [formGroup]="receiveExpenseForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Account</mat-label>
+    <mat-select formControlName="account">
+      <mat-option *ngFor="let account of accounts" [value]="account">
+        {{ account }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>

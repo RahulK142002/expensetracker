@@ -1,0 +1,55 @@
+<h1 mat-dialog-title>Add Budget</h1>
+<br>
+<mat-dialog-content [formGroup]="budgetForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Category</mat-label>
+    <input matInput formControlName="category" required>
+  </mat-form-field>
+  <div style="display: flex; gap: 16px;">
+    <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-label>Sub Category</mat-label>
+      <input matInput formControlName="subcategory" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-label>Amount</mat-label>
+      <input matInput formControlName="amount"  type="number">
+    </mat-form-field>
+  </div>
+  <div style="display: flex; gap: 16px;">
+    <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-label>Month and Year</mat-label>
+      <mat-select formControlName="month">
+        <mat-option *ngFor="let item of combinedMonthYear" [value]="item.month + ',' + item.year">
+          {{ item.month }} {{ item.year }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
+  <!-- <div style="display: flex; gap: 16px;">
+   
+    <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-label>Month</mat-label>
+      <mat-select formControlName="month">
+        <mat-option *ngFor="let i of month" [value]="i"  >{{ i }} </mat-option>
+        
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div style="display: flex; gap: 16px;">
+    <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-label>Year</mat-label>
+      <mat-select formControlName="year">
+        <mat-option *ngFor="let j of year" [value]="j">{{ j }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+   
+  </div> -->
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>
+
+

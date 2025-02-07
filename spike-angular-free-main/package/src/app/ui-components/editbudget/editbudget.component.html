@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Edit Element</h2>
+<mat-dialog-content [formGroup]="editbudgetForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <input matInput formControlName="category">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Sub Category</mat-label>
+    <input matInput formControlName="subcategory" >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Amount</mat-label>
+    <input matInput formControlName="amount" type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Month</mat-label>
+    <input matInput formControlName="month">
+  </mat-form-field>
+
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>

@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Add New Goal</h1>
+<br>
+<mat-dialog-content [formGroup]="goalForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" required>
+  </mat-form-field>
+  <div style="display: flex; gap: 16px;">
+    <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-label>Opening</mat-label>
+      <input matInput formControlName="opening" type="number" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-label>Target</mat-label>
+      <input matInput formControlName="target" type="number">
+    </mat-form-field>
+  </div>
+  <div style="display: flex; gap: 16px;">
+    <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-label>Date</mat-label>
+      <input matInput formControlName="date" type="date">
+    </mat-form-field>
+   
+  </div>
+  
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>
+
+

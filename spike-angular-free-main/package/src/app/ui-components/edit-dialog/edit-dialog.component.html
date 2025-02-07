@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Edit Element</h2>
+<mat-dialog-content [formGroup]="editForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Amount</mat-label>
+    <input matInput formControlName="amount" type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Date</mat-label>
+    <input matInput formControlName="date">
+  </mat-form-field>
+
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <input matInput formControlName="category">
+  </mat-form-field> -->
+
+  <mat-form-field appearance="fill">
+    <mat-label>Account</mat-label>
+    <input matInput formControlName="account">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>
+
